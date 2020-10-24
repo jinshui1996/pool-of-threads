@@ -9,7 +9,7 @@ class ctask :public cthread_task {
 		this_thread::sleep_for(chrono::seconds(1));
 	}
 private:
-	int k = 1;
+	int k = 2;
 };
 
 class ctask_t :public cthread_task {
