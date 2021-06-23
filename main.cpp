@@ -5,6 +5,7 @@
 //using namespace std;
 class ctask :public cthread_task {//任务的实例化一
 	void tasks() override {
+		cout << "hello ctask" << endl;
 		this_thread::sleep_for(chrono::seconds(1));
 	}
 };
@@ -12,7 +13,7 @@ class ctask :public cthread_task {//任务的实例化一
 class ctask_t :public cthread_task {//任务的实例化二，里面加了参数
 public:
 	void tasks() override {
-		cout << "hello task" << k << endl;
+		cout << "hello tasks" << k << endl;
 		this_thread::sleep_for(chrono::seconds(1));
 	}
 public:
