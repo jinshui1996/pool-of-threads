@@ -3,16 +3,13 @@
 #include <mutex>
 #include "cthreads.h"
 //using namespace std;
-class ctask :public cthread_task {
+class ctask :public cthread_task {//任务的实例化一
 	void tasks() override {
-		cout << "hello world" << k << endl;
 		this_thread::sleep_for(chrono::seconds(1));
 	}
-private:
-	int k = 2;
 };
 
-class ctask_t :public cthread_task {
+class ctask_t :public cthread_task {//任务的实例化二，里面加了参数
 public:
 	void tasks() override {
 		cout << "hello task" << k << endl;

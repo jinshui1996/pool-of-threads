@@ -30,7 +30,7 @@ void cthreads::run_thread(std::atomic_bool* thread_flag) {
 			task->tasks();
 		}
 		else {
-			this_thread::yield();
+			this_thread::yield();//สอทลืสิด
 		}
 	}
 	delete thread_flag;

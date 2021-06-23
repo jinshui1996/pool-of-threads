@@ -4,7 +4,7 @@
 #include <thread>
 #include "csafe_vector.h"
 #include "cthread_task.h"
-
+//用来定义线程池的操作和管理
 class cthreads //:public cthread_task
 {
 public:
@@ -18,6 +18,5 @@ private:
 
 private:
 	csafe_vector<std::shared_ptr<cthread_task>> _tasks;//存放任务
-	vector<std::atomic_bool*> _threads;//记录并且管理线程
-};
+	vector<std::atomic_bool*> _threads;//记录并且管理线程（还是原子操作};
 

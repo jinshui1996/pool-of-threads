@@ -4,7 +4,7 @@
 #include <mutex>
 using namespace std;
 //用来重新定义vector，使其可以并发；
-template<typename type>
+template<typename type>//模板的定义
 class csafe_vector
 {
 public:
@@ -26,6 +26,6 @@ public:
 
 private:
 	vector<type> _safe_vector;
-	mutex _mutex;
+	mutex _mutex;//用来实现vector的互斥访问
 };
 
